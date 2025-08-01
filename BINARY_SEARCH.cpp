@@ -7,14 +7,7 @@ void createArray(int arr[], int size) {
     }
 }
 
-int linearSearch(int arr[], int size, int element) {
-    for (int i = 0; i < size; i++) {  
-        if (arr[i] == element) {
-            return i;
-        }
-    }
-    return -1;
-}
+
 
 int binarySearch(int arr[], int size, int element) {
     int low = 0;
@@ -50,6 +43,8 @@ int main() {
     int arr[100], size;
     size = 10;
     createArray(arr, size);
+    
+    cout<<"BINARY SEARCH: "<<endl;
 
     cout << "Array:" << endl;
     for (int i = 0; i < size; i++) {  
@@ -61,12 +56,6 @@ int main() {
     cout << "Enter The Element to search: ";
     cin >> key;
 
-    int lsearched = linearSearch(arr, size, key);
-    if (lsearched != -1) {
-        cout << "The Element " << key << " is at the index of " << lsearched << endl;
-    } else {
-        cout << "The Element Not Found." << endl;
-    }
 
     int bsearch = binarySearch(arr, size, key);
     if (bsearch != -1) {
@@ -77,4 +66,3 @@ int main() {
 
     return 0;
 }
-
